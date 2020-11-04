@@ -1,0 +1,8 @@
+aluno0 = { nome: 'Carlos', nota: "9", disciplina: 'Informatica' }
+aluno1 = { nome: 'Wallacy', nota: "8", disciplina: 'Direito' }
+aluno2 = { nome: 'Simone', nota: "7", disciplina: 'Psicologia' }
+alunos = [aluno0, aluno1, aluno2]
+
+puts (aluno0[:nome] + " tirou nota " + aluno0[:nota] + " em " + aluno0[:disciplina])
+puts (aluno1[:nome] + " tirou nota " + aluno1[:nota] + " em " + aluno1[:disciplina])
+puts (aluno2[:nome] + " tirou nota " + aluno2[:nota] + " em " + aluno2[:disciplina])
