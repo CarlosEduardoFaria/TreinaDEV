@@ -1,0 +1,17 @@
+#Chamada Encadeada
+
+alunos = [{ nome: 'Carlos', nota: "9", disciplina: 'Informatica' }, { nome: 'Wallacy', nota: "8", disciplina: 'Direito' }, { nome: 'Simone', nota: "7", disciplina: 'Psicologia' }]
+
+puts (alunos[0][:nome] + " tirou nota " + alunos[0][:nota] + " em " + alunos[0][:disciplina])
+puts (alunos[1][:nome] + " tirou nota " + alunos[1][:nota] + " em " + alunos[1][:disciplina])
+puts (alunos[2][:nome] + " tirou nota " + alunos[2][:nota] + " em " + alunos[2][:disciplina])
+
+#Chamada unitária
+
+aluno1 = { nome: 'Carla', nota: "10", disciplina: 'Informatica'}
+aluno2 = { nome: 'Alice', nota: "9", disciplina: 'Direito' }
+aluno3 = { nome: 'Gustavo', nota: "9.5", disciplina: 'Psicologia'}
+
+puts (aluno1[:nome] + " tirou nota " + aluno1[:nota] + " em " + aluno1[:disciplina])
+puts (aluno2[:nome] + " tirou nota " + aluno2[:nota] + " em " + aluno2[:disciplina])
+puts (aluno3[:nome] + " tirou nota " + aluno3[:nota] + " em " + aluno3[:disciplina])

@@ -1,0 +1,6 @@
+puts ('Digite um numero: ')
+num = gets.to_i()
+puts ("O número é positivo? #{num.positive?()}")
+puts ("O número é negativo? #{num.negative?()}")
+puts ("O número é impar? " +(num.odd?.to_s))
+
