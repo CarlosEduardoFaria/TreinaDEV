@@ -18,3 +18,14 @@ psicologia.adiciona_aluno(simone)
 #metodo para exibir os alunos cadastrados na turma
 psicologia.total_alunos()
 
+#carrega o arquivo professor
+require_relative 'professor'
+
+#cria o objeto einstein com atributo ferias false (definido pelo construtor
+einstein = Professor.new('Einstein', 254222, '16/07/1988')
+
+#metodos para iniciar e encerrar as ferias
+einstein.inicia_ferias()
+einstein.encerra_ferias()
+
+
