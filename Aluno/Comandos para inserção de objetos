@@ -22,10 +22,19 @@ psicologia.total_alunos()
 require_relative 'professor'
 
 #cria o objeto einstein com atributo ferias false (definido pelo construtor
-einstein = Professor.new('Einstein', 254222, '16/07/1988')
+einstein = Professor.new('Einstein','Física', 254222, '16/07/1988')
 
 #metodos para iniciar e encerrar as ferias
 einstein.inicia_ferias()
 einstein.encerra_ferias()
+
+#carrega o objeto funcionario
+require_relative 'funcionario'
+
+#cria o objeto roberval
+roberval = Funcionario.new('Roberval', 336547, '19/02/75')
+
+#chamada do método para exibir as informações do funcionário
+roberval.imprime(roberval)
 
 
