@@ -1,0 +1,20 @@
+#carrega o arquivo aluno
+require_relative 'aluno'
+
+#adiciona os objetos carlos e simone (alunos)
+carlos = Aluno.new('Carlos Faria', '9648-72055', 336548)
+simone = Aluno.new('Simone Rodrigues', '995657951', 584587)
+
+#carrega o arquivo turma
+require_relative 'turma'
+
+#cria o objeto psicologia em turma
+psicologia = Turma.new('Psicologia', 36025, 'Eisntein')
+
+#metodo para adicionar alunos na tura de psicologia
+psicologia.adiciona_aluno(carlos)
+psicologia.adiciona_aluno(simone)
+
+#metodo para exibir os alunos cadastrados na turma
+psicologia.total_alunos()
+
