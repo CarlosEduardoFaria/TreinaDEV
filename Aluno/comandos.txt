@@ -37,6 +37,9 @@ roberval = Funcionario.new('Roberval', 336547, '19/02/75')
 #chamada do método para exibir as informações do funcionário
 roberval.imprime(roberval)
 
+<<<<<<< HEAD:Aluno/comandos.txt
 
 
+=======
+>>>>>>> e632fef735624021187f1bc702914a502eb60990:Aluno/Comandos para inserção de objetos
 
