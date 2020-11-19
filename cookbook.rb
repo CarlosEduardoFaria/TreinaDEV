@@ -1,37 +1,63 @@
+INSERE_RECEITA = 1
+EXIBE_RECEITA = 2
+BUSCA_RECEITA = 3
+SAIR = 0
+
+def menu()
+ puts "[#{INSERE_RECEITA}] Cadastrar uma receita"
+ puts "[#{EXIBE_RECEITA}] Ver todas as receitas"
+ puts "[#{BUSCA_RECEITA}] Buscar receita"
+ puts "[#{SAIR}] Sair"
+ print "Escolha uma opcao: "
+ return gets.to_i()
+end
+
+def insere_receita()
+    print "Digite o nome da receita: "
+    nome = gets.chomp()
+    print  "Digite o tipo da receita: "
+    tipo = gets.chomp()
+    puts "Receita #{nome} cadastrada com sucesso!"
+    puts
+    return {nome:nome, tipo: tipo}
+end
+
+def exibe_receita(r)
+    puts "=======Receitas cadastradas======="
+    r.each do |receita|
+    puts "#{receita[:nome]} - #{receita[:tipo]}"
+    end
+    if r.empty?
+        puts "Nenhuma receita cadastrada!"
+        puts
+    else
+    puts "Voce possui #{r.length()} receita(s)."
+    puts
+    end
+end
+
+def busca_receita(r)
+    #TODO
+end
+
 puts "Bem-vindo ao CookBook"
 
 receitas = []
-puts "[1] Cadastrar uma receita"
-puts "[2] Ver todas as receitas"
-puts "[3] Sair"
-print "Escolha uma opcao: "
-op = gets.to_i()
+op = menu()
 
-while (op != 3)
-    if (op==1)
-        print "Digite o nome da receita: "
-        nome = gets.chomp()
-        print  "Digite o tipo da receita: "
-        tipo = gets.chomp()
-        receitas << {nome: nome, tipo: tipo }
-        puts "Receita #{nome} cadastrada com sucesso!"
-        puts
-    elsif (op==2)    
-        puts "=======Receitas cadastradas======="
-        receitas.each do |receita|
-            puts "#{receita[:nome]} - #{receita[:tipo]}"
-        end
-        puts
+loop do
+    if      (op==INSERE_RECEITA)
+    receitas << insere_receita()
+    elsif   (op==EXIBE_RECEITA)    
+        exibe_receita(receitas)
+    elsif   (op==BUSCA_RECEITA)
+            #TODO
+    elsif   (op == SAIR)
+        break
     else
         puts "Opcao Invaida"
     end
-
-puts "[1] Cadastrar uma receita"
-puts "[2] Ver todas as receitas"
-puts "[3] Sair"
-print "Escolha uma opcao: "
-op = gets.to_i()
-
+    op = menu()
 end
 
 puts "Obrigado por usar a aplicacao!"
